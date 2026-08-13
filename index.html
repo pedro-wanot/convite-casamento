@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f3ec" />
+  <meta name="description" content="Convite digital responsivo de Pedro & Jordana" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>Pedro & Jordana — Convite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <canvas id="sparkles" aria-hidden="true"></canvas>
+
+  <!-- ABERTURA -->
+  <section class="intro" id="intro" aria-label="Abertura do convite">
+    <div class="intro__glow"></div>
+
+    <div class="envelope" id="envelope">
+      <div class="envelope__back"></div>
+
+      <article class="letter">
+        <span class="monogram">P | J</span>
+        <span class="letter__line"></span>
+        <h2>Temos um convite especial para você</h2>
+        <p id="guestIntro">Nosso casamento civil</p>
+      </article>
+
+      <div class="envelope__front"></div>
+      <div class="envelope__flap"></div>
+
+      <button class="seal" id="openInvite" aria-label="Abrir convite">♥</button>
+    </div>
+
+    <p class="intro__hint">toque no selo para abrir</p>
+  </section>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#inicio" aria-label="Voltar ao início">P | J</a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#detalhes">Detalhes</a>
+      <a href="#presenca">Presença</a>
+      <a href="#viagem">Viagem</a>      
+    </nav>
+
+    <div class="topbar__actions">
+      <button class="round-btn" id="shareBtn" aria-label="Compartilhar convite">↗</button>
+      <button class="round-btn menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-menu__close" id="menuClose" aria-label="Fechar menu">×</button>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#detalhes">Detalhes</a>
+      <a href="#presenca">Confirmar presença</a>
+      <a href="#viagem">Para quem vem de longe</a>      
+    </nav>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content reveal visible">
+        <p class="eyebrow" id="guestEyebrow">Nosso casamento civil</p>
+        <h1>Pedro <em>&</em> Jordana</h1>
+        <p class="hero__subtitle">Um novo capítulo começa aqui.</p>
+
+        <div class="divider">
+          <span></span><i>♡</i><span></span>
+        </div>
+
+        <p class="hero__date" id="heroDate">18 de setembro de 2026</p>
+
+        <div class="hero__actions">
+          <a class="button button--gold" href="#detalhes">Descobrir detalhes <span>↓</span></a>
+          <button class="button button--glass" id="calendarBtn">Adicionar à agenda</button>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#contador">
+        <span></span>
+        role para descobrir
+      </a>
+    </section>
+
+    <!-- CONTADOR -->
+    <section class="section section--counter" id="contador">
+      <div class="container">
+        <p class="section-label reveal">Faltam para o nosso grande dia</p>
+
+        <div class="countdown reveal" aria-live="polite">
+          <div><strong id="days">00</strong><span>dias</span></div>
+          <b>•</b>
+          <div><strong id="hours">00</strong><span>horas</span></div>
+          <b>•</b>
+          <div><strong id="minutes">00</strong><span>minutos</span></div>
+          <b>•</b>
+          <div><strong id="seconds">00</strong><span>segundos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOAS VINDAS -->
+    <section class="section">
+      <div class="container">
+        <article class="welcome-card glass reveal tilt">
+          <div class="ornament">❧</div>
+          <div>
+            <p class="eyebrow" id="welcomeEyebrow">Sejam muito bem-vindos</p>
+            <h2 id="welcomeTitle">Um dia simples, íntimo e muito especial.</h2>
+            <p id="welcomeText">
+              Preparamos este espaço com carinho para compartilhar cada detalhe
+              e facilitar a viagem de quem estará conosco.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DETALHES -->
+    <section class="section" id="detalhes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow" id="detailsEyebrow">Quando & onde</p>
+          <h2 id="detailsTitle">Casamento civil & celebração</h2>
+          <p id="detailsIntro">Confira os horários e locais preparados para este dia.</p>
+        </div>
+
+        <aside class="civil-note glass reveal" id="celebrationOnlyNote" data-celebration-only hidden>
+          <span class="civil-note__icon">♡</span>
+          <div>
+            <strong>Esperamos você para celebrar conosco</strong>
+            <p>
+              Nosso casamento civil acontecerá de forma reservada, com número limitado
+              de pessoas devido à capacidade do cartório. O momento que queremos
+              compartilhar com você começa na nossa celebração.
+            </p>
+          </div>
+        </aside>
+
+        <div class="details-grid">
+          <article class="info-card reveal tilt">
+            <span class="info-card__icon">◫</span>
+            <small>Data</small>
+            <strong id="detailDate">18 de setembro de 2026</strong>
+          </article>
+
+          <article class="info-card reveal tilt">
+            <span class="info-card__icon">◷</span>
+
+            <div class="event-line" data-civil-only>
+              <small>Horário Cartório</small>
+              <strong id="civilTime">14h30</strong>
+            </div>
+
+            <div class="event-line">
+              <small id="celebrationTimeLabel">Horário Celebração</small>
+              <strong id="celebrationTime">16h00</strong>
+            </div>
+          </article>
+
+          <article class="info-card reveal tilt">
+            <span class="info-card__icon">⌖</span>
+            <small>Local</small>
+
+            <div class="event-line" data-civil-only>
+              <strong>Cartório</strong>
+              <a class="local-link" target="_blank" rel="noopener noreferrer"
+                 id="civilMapLink" href="#">
+                Ver localização do cartório
+              </a>
+            </div>
+
+            <div class="event-line">
+              <strong>Celebração</strong>
+              <a class="local-link" target="_blank" rel="noopener noreferrer"
+                 id="celebrationMapLink" href="#">
+                Ver localização da celebração
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="action-grid reveal">
+          <a class="button button--outline" target="_blank"
+             rel="noopener noreferrer"
+             id="civilRouteButton" data-civil-only href="#">
+             Ver rota até o cartório
+          </a>
+
+          <a class="button button--outline" target="_blank"
+             rel="noopener noreferrer"
+             id="celebrationRouteButton" href="#">
+             Ver rota até a celebração
+          </a>
+
+          <a class="button button--gold" href="#presenca">Confirmar presença</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section" id="presenca">
+      <div class="container container--narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Confirmação de presença</p>
+          <h2>Você estará conosco?</h2>
+          <p id="rsvpIntro">Este convite foi preparado com seu nome. Escolha somente Sim ou Não; em seguida, o WhatsApp abrirá com a resposta pronta.</p>
+        </div>
+      
+        <form class="rsvp-card glass reveal" id="rsvpForm">
+          <input type="hidden" id="guestToken" name="token">
+          <input type="hidden" id="guestNameInput" name="name">
+          <input type="hidden" id="guestInviteType" name="inviteType">
+
+          <div class="field field--wide guest-name-preview">
+            <p id="guestDisplay">Seu convite está pronto.</p>
+          </div>
+
+          <fieldset class="field field--wide">
+            <legend>Você estará conosco?</legend>
+            <div class="choice-grid">
+              <label class="choice">
+                <input type="radio" name="attendance" value="Sim" required>
+                <span>✓ Sim, confirmo presença</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="attendance" value="Não" required>
+                <span>× Não poderei ir</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="button button--gold field--wide" type="submit">
+            Enviar resposta pelo WhatsApp
+          </button>
+
+          <p class="form-note field--wide">Ao continuar, o WhatsApp abrirá com sua resposta pronta. Basta tocar em enviar.</p>
+          <p class="form-status field--wide" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- VIAGEM -->
+    <section class="section" id="viagem">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Para quem vem de longe</p>
+          <h2>Queremos facilitar sua chegada</h2>
+        </div>
+
+        <div class="travel-grid">
+          <article class="travel-card reveal">
+            <span>▱</span>
+            <h3>Hospedagem</h3>
+            <p id="hotelHelpText">Sugestão de hotel próximo ao cartório e à celebração.</p>
+            <p><strong>Bei Monti Hotel</strong></p>
+            <p><a href="https://www.google.com/maps/dir/?api=1&destination=R.+Carlos+Scheffer+911+Arvorezinha+RS" target="_blank" rel="noopener noreferrer">Ver localização</a></p>
+          </article>
+
+          <article class="travel-card reveal">
+            <span>◇</span>
+            <h3>Deslocamento</h3>
+            <p id="transportHelpText">O cartório e a celebração ficam próximos e são fáceis de alcançar de carro.</p>
+          </article>
+
+          <article class="travel-card reveal">
+            <span>☷</span>
+            <h3>Celebração</h3>
+            <p id="celebrationHelpText">Após o casamento civil, teremos uma breve cerimônia, seguida de coquetel e recepção.</p>
+            <p>Preparamos esse momento com muito carinho para celebrarmos juntos essa nova etapa das nossas vidas.</p>
+          </article>
+
+          <article class="travel-card reveal">
+            <span>♨</span>
+            <h3>Costelão de despedida</h3>
+            <p>No dia seguinte, a partir das <strong id="farewellTime">9h</strong>, teremos um costelão de despedida para quem puder ficar conosco por mais um dia.</p>
+            <p>O local será informado durante a celebração.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <footer class="footer">
+      <div class="container reveal">
+        <span>♡</span>
+        <p>Será uma alegria viver esse momento com você.</p>
+        <strong>Pedro & Jordana</strong>
+      </div>
+    </footer>
+  </main>
+
+  <dialog id="dressDialog" class="dialog">
+    <button class="dialog__close" id="dressClose" aria-label="Fechar">×</button>
+    <p class="eyebrow">Traje</p>
+    <h2>Esporte fino</h2>
+    <p>
+      A proposta é estar elegante, mas confortável. Tons claros, neutros e naturais
+      combinam muito bem com a atmosfera da celebração.
+    </p>
+  </dialog>
+  <script src="./config.js" defer></script>
+  <script src="./app.js" defer></script>
+  <!-- Administração local: abra gerar-links.html para criar os links dos convidados. -->
+</body>
+</html>
