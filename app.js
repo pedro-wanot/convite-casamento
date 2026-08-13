@@ -227,7 +227,7 @@
 
   $("#openInvite")?.addEventListener("click", () => {
     envelope?.classList.add("open");
-    setTimeout(() => intro?.classList.add("opened"), 3000);
+    setTimeout(() => intro?.classList.add("opened"), 5000);
   });
 
   // ---------------------------------------------------------------------------
