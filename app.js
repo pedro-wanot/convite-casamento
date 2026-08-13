@@ -199,7 +199,7 @@
     if (guestDisplay) {
       guestDisplay.textContent = isCelebrationOnly
         ? `Convite para a celebração preparado especialmente para ${guest}.`
-        : `Convite completo preparado especialmente para ${guest}.`;
+        : `Convite preparado especialmente para ${guest}.`;
     }
 
     if (rsvpButton) rsvpButton.disabled = true;
