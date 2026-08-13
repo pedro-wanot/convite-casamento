@@ -10,7 +10,7 @@ window.WEDDING_CONFIG = {
   
   whatsappNumber: "5554991357866",
 
-  heroImage: "./assets/casal.jpg",
+  heroImage: "./casal.jpg",
 
   event: {
     dateLabel: "18 de setembro de 2026",
